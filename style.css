@@ -1,13 +1,23 @@
 :root {
-  --gold: #c8973f;
-  --gold-light: #f6ecd9;
-  --ink: #2e2620;
-  --ink-soft: #6b5f4f;
-  --bg: #fffaf2;
-  --card-bg: #ffffff;
-  --border: #ecdfc4;
-  --shadow: 0 4px 16px rgba(120, 90, 30, 0.08);
-  --radius: 16px;
+  --bg: #0c0c0d;
+  --surface: #141416;
+  --surface-2: #1c1c1f;
+  --text: #f4f2ec;
+  --text-soft: #a8a6a1;
+  --border: #2a2a2d;
+  --gold: #d9a441;
+  --gold-soft: #6b551f;
+
+  --tone-a: #b23a2e;   /* rust red   */
+  --tone-b: #1f2b4d;   /* deep navy  */
+  --tone-c: #2f4a3d;   /* forest    */
+  --tone-d: #6b2f4f;   /* plum      */
+  --tone-e: #2c5c66;   /* teal      */
+  --tone-f: #7a4a1e;   /* rust brown*/
+  --tone-g: #35422e;   /* olive     */
+  --tone-h: #3a2c5c;   /* violet    */
+
+  --radius: 4px;
 }
 
 * {
@@ -18,84 +28,107 @@ body {
   margin: 0;
   font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   background: var(--bg);
-  color: var(--ink);
+  color: var(--text);
   line-height: 1.6;
 }
 
-.hero {
-  background: linear-gradient(135deg, #3c2f22 0%, #6b4a2b 55%, #c8973f 100%);
-  color: #fff8ea;
-  padding: 64px 24px 48px;
-  text-align: center;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.hero-inner {
-  max-width: 720px;
+/* ---------- Hero ---------- */
+.hero {
+  background: var(--bg);
+  padding: 88px 24px 56px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-grid {
+  max-width: 1080px;
   margin: 0 auto;
 }
 
 .eyebrow {
+  font-family: "Space Grotesk", sans-serif;
   letter-spacing: 3px;
   font-size: 12px;
-  font-weight: 600;
-  opacity: 0.75;
-  margin: 0 0 12px;
+  font-weight: 700;
+  color: var(--gold);
+  margin: 0 0 20px;
+  text-transform: uppercase;
 }
 
 .hero h1 {
-  font-size: clamp(28px, 5vw, 42px);
-  margin: 0 0 12px;
-  font-weight: 800;
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 400;
+  font-size: clamp(48px, 10vw, 108px);
+  line-height: 0.98;
+  margin: 0 0 24px;
+  letter-spacing: -1px;
 }
 
 .subtitle {
   margin: 0;
   font-size: 16px;
-  opacity: 0.9;
+  color: var(--text-soft);
 }
 
+/* ---------- Tabs ---------- */
 .tabs {
   position: sticky;
   top: 0;
   z-index: 10;
   display: flex;
-  gap: 4px;
-  justify-content: center;
+  gap: 0;
   flex-wrap: wrap;
   background: var(--bg);
-  padding: 16px 12px;
+  padding: 0 24px;
   border-bottom: 1px solid var(--border);
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 .tab-btn {
-  border: 1px solid var(--border);
-  background: var(--card-bg);
-  color: var(--ink-soft);
-  padding: 10px 18px;
-  border-radius: 999px;
+  border: none;
+  border-right: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-soft);
+  padding: 18px 22px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.tab-btn span {
+  font-size: 11px;
+  color: var(--gold-soft);
+  font-weight: 700;
 }
 
 .tab-btn:hover {
-  border-color: var(--gold);
-  color: var(--ink);
+  color: var(--text);
 }
 
 .tab-btn.active {
-  background: var(--gold);
-  border-color: var(--gold);
-  color: #fff;
-  box-shadow: var(--shadow);
+  color: var(--gold);
 }
 
+.tab-btn.active span {
+  color: var(--gold);
+}
+
+/* ---------- Content ---------- */
 .content {
-  max-width: 960px;
+  max-width: 1080px;
   margin: 0 auto;
-  padding: 40px 20px 80px;
+  padding: 56px 24px 100px;
 }
 
 .tab-panel {
@@ -112,98 +145,255 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+.section-head {
+  margin-bottom: 40px;
+  max-width: 640px;
+}
+
 .content h2 {
-  font-size: 24px;
-  margin: 0 0 8px;
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 400;
+  font-size: clamp(30px, 5vw, 44px);
+  margin: 0 0 12px;
+  letter-spacing: -0.5px;
 }
 
 .section-desc {
-  color: var(--ink-soft);
-  margin: 0 0 28px;
+  color: var(--text-soft);
+  margin: 0;
+  font-size: 15px;
 }
 
+.group-label {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text);
+  margin: 48px 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.group-label span {
+  color: var(--text-soft);
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 12px;
+}
+
+/* ---------- Card grid ---------- */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
 .card {
-  background: var(--card-bg);
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 20px;
-  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: block;
+  transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
-.card-tag {
-  display: inline-block;
+a.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold-soft);
+}
+
+.card-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--surface-2);
+}
+
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+a.card:hover .card-media img {
+  transform: scale(1.06);
+}
+
+.card-pill {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(12, 12, 13, 0.75);
+  backdrop-filter: blur(4px);
+  color: var(--text);
   font-size: 12px;
-  font-weight: 700;
-  color: var(--gold);
-  background: var(--gold-light);
-  padding: 4px 10px;
+  font-weight: 600;
+  padding: 5px 10px;
   border-radius: 999px;
-  margin-bottom: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.graphic-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.tone-a .graphic-media { background: var(--tone-a); }
+.tone-b .graphic-media { background: var(--tone-b); }
+.tone-c .graphic-media { background: var(--tone-c); }
+.tone-d .graphic-media { background: var(--tone-d); }
+.tone-e .graphic-media { background: var(--tone-e); }
+.tone-f .graphic-media { background: var(--tone-f); }
+.tone-g .graphic-media { background: var(--tone-g); }
+.tone-h .graphic-media { background: var(--tone-h); }
+
+.graphic-word {
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.05;
+  color: rgba(255, 255, 255, 0.94);
+  margin: 0;
+}
+
+.graphic-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 4px 9px;
+  border-radius: 999px;
+}
+
+.card-body {
+  padding: 18px 18px 20px;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 
 .card h3 {
-  margin: 0 0 8px;
+  margin: 0;
   font-size: 17px;
+  font-weight: 700;
+}
+
+.card-arrow {
+  color: var(--gold);
+  font-size: 16px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+a.card:hover .card-arrow {
+  transform: translate(2px, -2px);
 }
 
 .card p {
   margin: 0;
-  color: var(--ink-soft);
-  font-size: 14px;
+  color: var(--text-soft);
+  font-size: 13.5px;
+  line-height: 1.55;
 }
 
-.card-meta {
-  list-style: none;
-  padding: 0;
-  margin: 12px 0 0;
-  font-size: 13px;
-  color: var(--ink-soft);
+.card-meta-row {
+  margin-top: 12px;
+  font-size: 12.5px;
+  color: var(--gold);
+  font-weight: 600;
+  display: flex;
+  gap: 6px;
+  align-items: center;
 }
 
-.card-meta li {
-  margin-top: 4px;
+.card-meta-row .dot {
+  color: var(--text-soft);
+}
+
+.photo-credit {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: var(--text-soft);
+  text-align: right;
+}
+
+.simple-card {
+  padding: 22px;
+  border-radius: var(--radius);
+}
+
+.simple-card h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.simple-card p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 13.5px;
 }
 
 .tip-box {
-  margin-top: 28px;
-  background: var(--gold-light);
+  margin-top: 32px;
+  background: var(--surface);
   border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
   border-radius: var(--radius);
   padding: 16px 20px;
   font-size: 14px;
-  color: var(--ink);
+  color: var(--text);
 }
 
-/* Timeline (일정 추천) */
+.tip-box b {
+  color: var(--gold);
+}
+
+/* ---------- Timeline (일정 추천) ---------- */
 .timeline {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 24px;
 }
 
 .day {
-  background: var(--card-bg);
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 20px 24px;
-  box-shadow: var(--shadow);
+  padding: 24px 26px;
 }
 
 .day-label {
   display: inline-block;
-  font-weight: 800;
-  color: #fff;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  color: var(--bg);
   background: var(--gold);
-  padding: 4px 14px;
+  padding: 5px 16px;
   border-radius: 999px;
   font-size: 13px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .day-events {
@@ -214,7 +404,7 @@ body {
 
 .event {
   display: grid;
-  grid-template-columns: 64px 1fr;
+  grid-template-columns: 72px 1fr;
   gap: 12px;
   padding-bottom: 14px;
   border-bottom: 1px dashed var(--border);
@@ -226,6 +416,7 @@ body {
 }
 
 .event .time {
+  font-family: "Space Grotesk", sans-serif;
   font-size: 12px;
   font-weight: 700;
   color: var(--gold);
@@ -240,15 +431,17 @@ body {
 .event p {
   margin: 0;
   font-size: 13.5px;
-  color: var(--ink-soft);
+  color: var(--text-soft);
 }
 
 .footer {
   text-align: center;
-  padding: 32px 20px;
-  color: var(--ink-soft);
-  font-size: 14px;
+  padding: 40px 20px;
+  color: var(--text-soft);
+  font-size: 13px;
   border-top: 1px solid var(--border);
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 0.5px;
 }
 
 @media (max-width: 480px) {
@@ -257,5 +450,12 @@ body {
   }
   .event .time {
     padding-top: 0;
+  }
+  .tabs {
+    padding: 0 12px;
+  }
+  .tab-btn {
+    padding: 14px 14px;
+    font-size: 13px;
   }
 }

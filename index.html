@@ -3,85 +3,187 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>엄마랑 경주 여행 🌸</title>
-<meta name="description" content="엄마와 함께 떠나는 경주 여행 계획 - 숙소, 일정, 맛집 추천" />
+<title>엄마랑 경주 여행</title>
+<meta name="description" content="엄마와 함께 떠나는 경주 여행 계획 — 숙소, 일정, 맛집 추천" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏯</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="hero">
-    <div class="hero-inner">
-      <p class="eyebrow">MOTHER &amp; DAUGHTER TRIP</p>
-      <h1>엄마랑 경주 여행 🌸</h1>
+    <div class="hero-grid">
+      <p class="eyebrow">MOTHER &amp; DAUGHTER TRIP — GYEONGJU</p>
+      <h1>엄마랑<br />경주 여행</h1>
       <p class="subtitle">천년 고도 경주에서, 엄마와 함께 걷는 시간</p>
     </div>
   </header>
 
   <nav class="tabs" role="tablist" aria-label="여행 정보 탭">
-    <button class="tab-btn active" data-tab="lodging" role="tab" aria-selected="true">🏨 숙소 추천</button>
-    <button class="tab-btn" data-tab="itinerary" role="tab" aria-selected="false">🗺️ 일정 추천</button>
-    <button class="tab-btn" data-tab="food" role="tab" aria-selected="false">🍽️ 맛집 추천</button>
-    <button class="tab-btn" data-tab="tips" role="tab" aria-selected="false">🎒 준비물 &amp; 팁</button>
+    <button class="tab-btn active" data-tab="lodging" role="tab" aria-selected="true"><span>01</span>숙소 추천</button>
+    <button class="tab-btn" data-tab="itinerary" role="tab" aria-selected="false"><span>02</span>일정 추천</button>
+    <button class="tab-btn" data-tab="food" role="tab" aria-selected="false"><span>03</span>맛집 추천</button>
+    <button class="tab-btn" data-tab="tips" role="tab" aria-selected="false"><span>04</span>준비물 &amp; 팁</button>
   </nav>
 
   <main class="content">
 
     <!-- 숙소 추천 -->
     <section class="tab-panel active" id="lodging" role="tabpanel">
-      <h2>숙소 추천</h2>
-      <p class="section-desc">이동 편의성과 편안함을 함께 고려했어요. 엄마와 함께라면 대중교통보다 도보 이동이 편한 위치가 좋아요.</p>
+      <div class="section-head">
+        <h2>숙소 추천</h2>
+        <p class="section-desc">스테이폴리오·아고다 큐레이션을 기준으로, 자쿠지가 있는 감성 스테이와 네이버 리뷰가 검증된 호텔을 함께 골랐어요.</p>
+      </div>
 
+      <p class="group-label">자쿠지 있는 감성 스테이 <span>Stayfolio</span></p>
+      <div class="card-grid photo-grid">
+
+        <a class="card photo-card" href="https://www.stayfolio.com/findstay/hohe-gyeongju" target="_blank" rel="noopener">
+          <div class="card-media">
+            <img src="https://images.stayfolio.com/system/pictures/images/000/230/309/original/57487d618a39871c7b114aa0c17cf17d06329e5e.jpeg" alt="호헤 경주" loading="lazy" />
+            <span class="card-pill">🛁 자쿠지</span>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3>호헤 경주</h3>
+              <span class="card-arrow">↗</span>
+            </div>
+            <p>객실마다 개별 마당과 수영장, 실내 자쿠지까지. 불국사·석굴암 근처, 조용한 마을에서 온전히 쉬는 하루.</p>
+            <div class="card-meta-row">
+              <span>₩260,000~</span>
+              <span class="dot">·</span>
+              <span>경주시 갓거랑길</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="card photo-card" href="https://www.stayfolio.com/findstay/staysirae" target="_blank" rel="noopener">
+          <div class="card-media">
+            <img src="https://images.stayfolio.com/system/pictures/images/000/325/757/original/3596ed2b3f190211e40232ff197bdf010aaac41f.jpg" alt="스테이시래" loading="lazy" />
+            <span class="card-pill">🛁 자쿠지</span>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3>스테이시래</h3>
+              <span class="card-arrow">↗</span>
+            </div>
+            <p>자쿠지·사우나·실내 미온수 수영장에 야외 불멍까지. 방 2개라 셋이 묵어도 넉넉해요.</p>
+            <div class="card-meta-row">
+              <span>₩450,000~</span>
+              <span class="dot">·</span>
+              <span>불국사 인근 시래동</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="card photo-card" href="https://www.stayfolio.com/findstay/stay-neungok" target="_blank" rel="noopener">
+          <div class="card-media">
+            <img src="https://images.stayfolio.com/system/pictures/images/000/167/363/original/7c1e765e38b1d53f3c7a6d5d5da247d2058d8f6d.jpg" alt="스테이 능옥" loading="lazy" />
+            <span class="card-pill">🛁 노천탕</span>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3>스테이 능옥</h3>
+              <span class="card-arrow">↗</span>
+            </div>
+            <p>실내 욕조와 노천탕이 함께 있는 타입도 있어요. 노을빛 받으며 즐기는 반신욕, 황리단길 도보권.</p>
+            <div class="card-meta-row">
+              <span>₩260,000~</span>
+              <span class="dot">·</span>
+              <span>황남동, 황리단길 인근</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="card photo-card" href="https://www.stayfolio.com/findstay/uonstay" target="_blank" rel="noopener">
+          <div class="card-media">
+            <img src="https://images.stayfolio.com/system/pictures/images/000/119/445/original/2ef39851b9012359889e13de57e18d21ac0447b3.jpg" alt="유온" loading="lazy" />
+            <span class="card-pill">♨️ 프라이빗 스파</span>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3>유온</h3>
+              <span class="card-arrow">↗</span>
+            </div>
+            <p>숲과 호수를 낀 프라이빗 온스파. 조식·석식이 포함돼 어머니와 느긋하게 머물기 좋아요.</p>
+            <div class="card-meta-row">
+              <span>₩269,000~</span>
+              <span class="dot">·</span>
+              <span>천북면, 호수 뷰</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <p class="photo-credit">사진 출처: Stayfolio</p>
+
+      <p class="group-label">네이버 리뷰 좋은 호텔 <span>Naver &amp; Agoda</span></p>
       <div class="card-grid">
-        <article class="card">
-          <div class="card-tag">보문관광단지 · 호캉스</div>
-          <h3>라한셀렉트 경주</h3>
-          <p>보문호수 바로 앞, 넓고 쾌적한 객실. 조식 뷔페와 스파가 잘 되어있어 여유로운 휴양에 좋아요.</p>
-          <ul class="card-meta">
-            <li>✔️ 호수 전망 객실 추천</li>
-            <li>✔️ 경주월드·아쿠아플라넷과 가까움</li>
-          </ul>
-        </article>
 
-        <article class="card">
-          <div class="card-tag">보문관광단지 · 프리미엄</div>
-          <h3>힐튼 경주</h3>
-          <p>보문호수 산책로 바로 옆. 조용하고 클래식한 분위기라 어머니들이 특히 편안해하는 숙소예요.</p>
-          <ul class="card-meta">
-            <li>✔️ 야외 수영장 (여름 시즌)</li>
-            <li>✔️ 호수 산책로 도보 접근</li>
-          </ul>
-        </article>
+        <a class="card graphic-card tone-a" href="https://www.agoda.com/ko-kr/lahan-select-gyeongju/reviews/gyeongju-si-kr.html" target="_blank" rel="noopener">
+          <div class="graphic-media">
+            <p class="graphic-word">LAHAN<br />SELECT</p>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3>라한셀렉트 경주</h3>
+              <span class="card-arrow">↗</span>
+            </div>
+            <p>보문호수 전망 5성급. 아고다 평점 8.5 · 리뷰 600개 이상. 실내외 수영장과 카바나, 객실 자쿠지 보유.</p>
+            <div class="card-meta-row">
+              <span>★ 8.5 (Agoda)</span>
+              <span class="dot">·</span>
+              <span>보문관광단지</span>
+            </div>
+          </div>
+        </a>
 
-        <article class="card">
-          <div class="card-tag">황리단길 · 감성 한옥</div>
-          <h3>황남동 한옥스테이</h3>
-          <p>대릉원·황리단길을 걸어서 다닐 수 있는 한옥 게스트하우스. 온돌방에서 엄마와 도란도란 이야기하기 좋아요.</p>
-          <ul class="card-meta">
-            <li>✔️ 도보로 야경 명소 이동 가능</li>
-            <li>✔️ 온돌 침구, 한옥 마당</li>
-          </ul>
-        </article>
+        <a class="card graphic-card tone-b" href="https://map.naver.com/p/search/%ED%9E%90%ED%84%B4%20%EA%B2%BD%EC%A3%BC" target="_blank" rel="noopener">
+          <div class="graphic-media">
+            <p class="graphic-word">HILTON<br />GYEONGJU</p>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3>힐튼 경주</h3>
+              <span class="card-arrow">↗</span>
+            </div>
+            <p>보문호수 산책로 바로 옆, 조용하고 클래식한 분위기. 어머니들이 특히 편안해하는 숙소예요.</p>
+            <div class="card-meta-row">
+              <span>네이버 리뷰 보기</span>
+            </div>
+          </div>
+        </a>
 
-        <article class="card">
-          <div class="card-tag">시내 · 가성비</div>
-          <h3>경주 시내 비즈니스호텔</h3>
-          <p>KTX 신경주역·고속버스터미널 접근이 편하고 가격도 합리적. 짧은 1박 일정이라면 추천해요.</p>
-          <ul class="card-meta">
-            <li>✔️ 대중교통·주차 편리</li>
-            <li>✔️ 합리적인 가격대</li>
-          </ul>
-        </article>
+        <a class="card graphic-card tone-c" href="https://tomonoyakj.co.kr/" target="_blank" rel="noopener">
+          <div class="graphic-media">
+            <p class="graphic-word">TOMO<br />NOYA</p>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3>토모노야 호텔&amp;료칸</h3>
+              <span class="card-arrow">↗</span>
+            </div>
+            <p>전 객실 히노끼(편백) 욕조, 조식·석식 포함. 감포 해안가의 프라이빗 료칸 스테이.</p>
+            <div class="card-meta-row">
+              <span>♨️ 히노끼탕</span>
+              <span class="dot">·</span>
+              <span>감포읍 해안가</span>
+            </div>
+          </div>
+        </a>
       </div>
 
       <div class="tip-box">
-        💡 <b>Tip.</b> 야경(첨성대·동궁과 월지)을 즐기고 싶다면 <b>황리단길 한옥스테이</b>, 편안한 휴식이 우선이라면 <b>보문단지 호텔</b>을 추천해요.
+        <b>Tip.</b> 야경·도보 이동이 우선이면 <b>스테이 능옥</b>, 완전한 휴양이라면 <b>유온</b>이나 <b>호헤 경주</b>, 검증된 호텔 편의시설이 필요하면 <b>라한셀렉트 경주</b>를 추천해요.
       </div>
     </section>
 
     <!-- 일정 추천 -->
     <section class="tab-panel" id="itinerary" role="tabpanel">
-      <h2>일정 추천 (2박 3일)</h2>
-      <p class="section-desc">천천히, 많이 걷지 않도록 동선을 짰어요. 일정은 자유롭게 순서를 바꿔도 좋아요.</p>
+      <div class="section-head">
+        <h2>일정 추천 (2박 3일)</h2>
+        <p class="section-desc">천천히, 많이 걷지 않도록 동선을 짰어요. 일정은 자유롭게 순서를 바꿔도 좋아요.</p>
+      </div>
 
       <div class="timeline">
         <div class="day">
@@ -165,7 +267,7 @@
             <div class="event">
               <span class="time">오후</span>
               <div>
-                <h4>경주 대릉원 돌담길 &amp; 기념품 구매</h4>
+                <h4>대릉원 돌담길 &amp; 기념품 구매</h4>
                 <p>마지막으로 못 가본 곳을 둘러보고 귀가 준비.</p>
               </div>
             </div>
@@ -174,56 +276,115 @@
       </div>
 
       <div class="tip-box">
-        💡 <b>Tip.</b> 1박 2일이라면 <b>Day1 저녁 + Day2</b> 일정만 따라가도 경주의 핵심을 다 즐길 수 있어요.
+        <b>Tip.</b> 1박 2일이라면 <b>Day1 저녁 + Day2</b> 일정만 따라가도 경주의 핵심을 다 즐길 수 있어요.
       </div>
     </section>
 
     <!-- 맛집 추천 -->
     <section class="tab-panel" id="food" role="tabpanel">
-      <h2>맛집 추천</h2>
-      <p class="section-desc">경주 여행 중 꼭 먹어봐야 할 메뉴들이에요.</p>
+      <div class="section-head">
+        <h2>맛집 추천</h2>
+        <p class="section-desc">카테고리별로 골랐어요. 카드를 누르면 네이버 지도에서 위치와 실제 리뷰를 바로 확인할 수 있어요.</p>
+      </div>
 
       <div class="card-grid">
-        <article class="card">
-          <div class="card-tag">향토음식</div>
-          <h3>경주 한정식</h3>
-          <p>황남동 일대에 정갈한 한정식집이 많아요. 여러 반찬을 조금씩 맛볼 수 있어 어머니 입맛에도 잘 맞아요.</p>
-        </article>
-        <article class="card">
-          <div class="card-tag">별미</div>
-          <h3>도토리 수제비 / 쌈밥</h3>
-          <p>불국사 근처에 든든하고 건강한 한 끼로 유명한 식당들이 모여있어요.</p>
-        </article>
-        <article class="card">
-          <div class="card-tag">황리단길 카페</div>
-          <h3>황남빵 &amp; 찐빵</h3>
-          <p>경주 대표 디저트. 카페에서 쉬어가며 하나씩 맛보기 좋아요.</p>
-        </article>
-        <article class="card">
-          <div class="card-tag">보양식</div>
-          <h3>연잎밥 정식</h3>
-          <p>담백하고 속이 편안한 메뉴라 여행 중 부담 없는 식사로 추천해요.</p>
-        </article>
+
+        <a class="card graphic-card tone-d" href="https://map.naver.com/p/search/%EC%9A%94%EC%84%9D%EA%B6%811779" target="_blank" rel="noopener">
+          <div class="graphic-media">
+            <span class="graphic-tag">한정식</span>
+            <p class="graphic-word">요석궁<br />1779</p>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3>요석궁1779</h3>
+              <span class="card-arrow">↗</span>
+            </div>
+            <p>270년 전통 최부잣집 내림음식. 놋그릇에 정갈하게 차려지는 반가의 상차림, 예약 필수.</p>
+            <div class="card-meta-row"><span>교동, 예약제</span></div>
+          </div>
+        </a>
+
+        <a class="card graphic-card tone-e" href="https://map.naver.com/p/search/%EC%98%A4%EB%AF%B8%EC%86%90%EC%B9%BC%EA%B5%AD%EC%88%98" target="_blank" rel="noopener">
+          <div class="graphic-media">
+            <span class="graphic-tag">국수</span>
+            <p class="graphic-word">오미<br />손칼국수</p>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3>오미손칼국수</h3>
+              <span class="card-arrow">↗</span>
+            </div>
+            <p>개점 시간에 맞춰가지 않으면 놓치는 현지인 인기 칼국수집. 담백한 국물이 매력.</p>
+            <div class="card-meta-row"><span>경주시 원효로</span></div>
+          </div>
+        </a>
+
+        <a class="card graphic-card tone-f" href="https://map.naver.com/p/search/%ED%96%A5%ED%99%94%EC%A0%95%20%ED%99%A9%EB%A6%AC%EB%8B%A8%EA%B8%B8" target="_blank" rel="noopener">
+          <div class="graphic-media">
+            <span class="graphic-tag">한우 · 한식</span>
+            <p class="graphic-word">향화정</p>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3>향화정</h3>
+              <span class="card-arrow">↗</span>
+            </div>
+            <p>황리단길 최대 규모 한옥 한식당. 둥근 거울 포토존으로도 유명, 한우 메뉴 다양.</p>
+            <div class="card-meta-row"><span>황리단길</span></div>
+          </div>
+        </a>
+
+        <a class="card graphic-card tone-g" href="https://map.naver.com/p/search/%ED%96%A5%EC%A0%81%EC%9B%90%20%EB%B6%88%EA%B5%AD%EC%82%AC" target="_blank" rel="noopener">
+          <div class="graphic-media">
+            <span class="graphic-tag">사찰음식</span>
+            <p class="graphic-word">향적원</p>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3>향적원</h3>
+              <span class="card-arrow">↗</span>
+            </div>
+            <p>불국사 오르는 길, 스님이 직접 차리는 연잎밥 정식. 담백하고 속 편한 사찰음식.</p>
+            <div class="card-meta-row"><span>불국사 인근</span></div>
+          </div>
+        </a>
+
+        <a class="card graphic-card tone-h" href="https://map.naver.com/p/search/%ED%99%A9%EB%82%A8%EB%B9%B5%20%EB%B3%B8%EC%A0%90" target="_blank" rel="noopener">
+          <div class="graphic-media">
+            <span class="graphic-tag">디저트</span>
+            <p class="graphic-word">황남빵<br />본점</p>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3>황남빵 본점</h3>
+              <span class="card-arrow">↗</span>
+            </div>
+            <p>1939년부터 이어온 원조 경주빵. 체인점 없이 태종로 본점 한 곳뿐이에요.</p>
+            <div class="card-meta-row"><span>태종로</span></div>
+          </div>
+        </a>
       </div>
     </section>
 
     <!-- 준비물 & 팁 -->
     <section class="tab-panel" id="tips" role="tabpanel">
-      <h2>준비물 &amp; 여행 팁</h2>
+      <div class="section-head">
+        <h2>준비물 &amp; 여행 팁</h2>
+      </div>
       <div class="card-grid">
-        <article class="card">
+        <article class="card simple-card">
           <h3>👟 편한 신발</h3>
           <p>대릉원, 동궁과 월지 등 넓은 야외 유적지를 걷는 일정이 많아요. 쿠션감 좋은 운동화가 필수예요.</p>
         </article>
-        <article class="card">
+        <article class="card simple-card">
           <h3>🧥 얇은 겉옷</h3>
           <p>저녁 야경 산책 시 쌀쌀할 수 있어요. 가볍게 걸칠 옷을 챙겨요.</p>
         </article>
-        <article class="card">
+        <article class="card simple-card">
           <h3>🚗 이동 수단</h3>
           <p>주요 관광지가 흩어져 있어 렌터카나 택시 이용이 편해요. 대중교통 이용 시 시간 여유를 넉넉히 두세요.</p>
         </article>
-        <article class="card">
+        <article class="card simple-card">
           <h3>📸 카메라 · 보조배터리</h3>
           <p>야경 명소가 많은 만큼 사진 찍을 일이 많아요. 보조배터리는 꼭 챙기기!</p>
         </article>
@@ -233,7 +394,7 @@
   </main>
 
   <footer class="footer">
-    <p>엄마와 함께, 천년의 시간을 걷다 🌷</p>
+    <p>엄마와 함께, 천년의 시간을 걷다</p>
   </footer>
 
   <script src="script.js"></script>
