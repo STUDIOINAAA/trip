@@ -1,12 +1,13 @@
 :root {
-  --bg: #0c0c0d;
-  --surface: #141416;
-  --surface-2: #1c1c1f;
-  --text: #f4f2ec;
-  --text-soft: #a8a6a1;
-  --border: #2a2a2d;
-  --gold: #d9a441;
-  --gold-soft: #6b551f;
+  --bg: #faf9f5;
+  --surface: #ffffff;
+  --surface-2: #f1efe7;
+  --text: #1a1917;
+  --text-soft: #6b675f;
+  --border: #e3e0d6;
+  --gold: #b9812a;
+  --gold-soft: #c9a15a;
+  --shadow: 0 2px 14px rgba(20, 18, 10, 0.06);
 
   --tone-a: #b23a2e;   /* rust red   */
   --tone-b: #1f2b4d;   /* deep navy  */
@@ -200,12 +201,14 @@ a {
   border-radius: var(--radius);
   overflow: hidden;
   display: block;
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 a.card:hover {
   transform: translateY(-4px);
   border-color: var(--gold-soft);
+  box-shadow: 0 10px 24px rgba(20, 18, 10, 0.1);
 }
 
 .card-media {
@@ -382,6 +385,7 @@ a.card:hover .card-arrow {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 24px 26px;
+  box-shadow: var(--shadow);
 }
 
 .day-label {
