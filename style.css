@@ -358,6 +358,92 @@ a.card:hover .card-arrow {
   font-size: 13.5px;
 }
 
+/* ---------- Mini thumbnail grid (dense overview) ---------- */
+.mini-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.mini-card {
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mini-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(20, 18, 10, 0.1);
+}
+
+.mini-media {
+  aspect-ratio: 1 / 1;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+}
+
+.tone-a .mini-media { background: var(--tone-a); }
+.tone-b .mini-media { background: var(--tone-b); }
+.tone-c .mini-media { background: var(--tone-c); }
+.tone-d .mini-media { background: var(--tone-d); }
+.tone-e .mini-media { background: var(--tone-e); }
+.tone-f .mini-media { background: var(--tone-f); }
+.tone-g .mini-media { background: var(--tone-g); }
+.tone-h .mini-media { background: var(--tone-h); }
+
+.mini-tag {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 2px 6px;
+  border-radius: 999px;
+}
+
+.mini-word {
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.15;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+}
+
+.mini-body {
+  padding: 9px 10px 11px;
+}
+
+.mini-body h4 {
+  margin: 0 0 2px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mini-desc {
+  font-size: 10.5px;
+  color: var(--text-soft);
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* ---------- Compact list rows ---------- */
 .list-wrap {
   border: 1px solid var(--border);
